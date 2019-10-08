@@ -17,10 +17,19 @@
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a href="index.html" class="nav-link">Accueil <span class="sr-only">(current)</span></a>
+                    <a href="index.html" class="nav-link disabled">Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a href="./plus/" class="nav-link">En Savoir Plus</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="mesProjets" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Mes Projets
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown">
+                        <a href="./projets/pathFinding/" class="dropdown-item">path finding</a>
+                        <a href="./projets/image-Parser/" class="dropdown-item">Trieur d'image</a>
+                    </div>
                 </li>
             </ul>
         </div>
