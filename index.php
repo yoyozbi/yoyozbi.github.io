@@ -34,8 +34,20 @@
             </ul>
         </div>
     </nav>
-    <h1>attaque en temps réel</h1>
-    <iframe width="900" height="441" src="https://cybermap.kaspersky.com/fr/widget/dynamic/dark" frameborder="0">
+    <h1>test ssh</h1>
+    <form method="post">
+        <input type="submit" value="test ssh"/>
+        <input type="hidden" name="start" value="true">
+    </form>
+    <?php
+        if($_SERVER['REQUEST_METHOD'] == "post")
+        {
+            $connection = ssh2_connect("188.155.5.184");
+            ssh2_auth_password($connection, 'ubuntu', 'lsavYoZbi2019#');
+            $stream = ssh2_exec($connection, "ls /data/");
+            var_dump($stream);
+        }
+    ?>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
